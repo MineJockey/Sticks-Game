@@ -37,8 +37,8 @@ def sticks_game_l3():
         remove = 1
       elif sticks_left > 4:
         remove = randint(1,3)
-    print("%s removes %s sticks - %s sticks left" % (turn_name, str(remove), str(sticks_left - remove)))
     sticks_left -= remove if sticks_left > remove else sticks_left
+    print("%s removes %s sticks - %s sticks left" % (turn_name, str(remove), str(sticks_left)))
     p1_turn = not p1_turn
 
   winner = p1 if p1_turn else p2
