@@ -15,7 +15,12 @@ def sticks_game_l3():
   sticks_left = 15
   p1 = input("Enter a name please: ")
   p2 = input("Enter a name for the computer: ")
-  p1_turn = True
+  
+  whos_turn = input('Who goes first: 1(%s) or 2(%s)' % (p1, p2))
+  if int(whos_turn) == 1:
+    p1_turn = True
+  else:
+    p1_turn = False  
 
   while sticks_left > 0:
     turn_name = p1 if p1_turn else p2
